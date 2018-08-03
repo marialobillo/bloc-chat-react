@@ -26,3 +26,52 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/*
+blue : #05386B;
+dark green: #379683;
+green: #5CDB95;
+green-light: #8EE4AF;
+white: #EDF5E1;
+*/
+
+body{
+  background-color: #5CDB95;
+}
+/* Room List */
+.aside-menu{
+  height: 100%;
+   width: 250px;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #05386B;
+   overflow-x: hidden;
+   padding-top: 30px;
+   color: #EDF5E1;
+
+}
+
+.aside-menu ul{
+  list-style-type: none;
+}
+
+.aside-menu ul li{
+  width: 100%;
+  font-size: 20px;
+  float:left;
+  padding: 10px;
+}
+
+.aside-title{
+  color: #8EE4AF;
+  font-size: 40px;
+}
+
+.room-list ul {
+  text-decoration: none;
+}
+
+.content{
+  color: #EDF5E1;
+}
