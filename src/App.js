@@ -18,10 +18,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <sidebar className="aside-menu">
+        <nav className="aside-menu">
           <h3 className="aside-title">Bloc Chat</h3>
           <RoomList firebase={firebase}/>
-        </sidebar>
+        </nav>
         <section className="content">
           This is for main content
         </section>
