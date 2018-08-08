@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import './App.css';
 import RoomList from './components/RoomList';
+import RoomForm from './components/RoomForm';
 
   // Initialize Firebase
   const config = {
@@ -12,15 +13,32 @@ import RoomList from './components/RoomList';
     storageBucket: "bloc-chat-1adce.appspot.com",
     messagingSenderId: "1029508064838"
   };
-  firebase.initializeApp(config);
+
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.addRoomName = this.addRoomName.bind(this);
+
+    this.app = firebase.initializeApp(config);
+    this.database = this.app.database().ref().child('rooms');
+
+    this.state = {
+      rooms: [],
+    }
+  }
+
+  addRoomName(room){
+    console.log(room);
+    this.database.push().set({ name: room });
+  }
   render() {
     return (
       <div className="App">
         <nav className="aside-menu">
           <h3 className="aside-title">Bloc Chat</h3>
           <RoomList firebase={firebase}/>
+          <RoomForm addRoomName={this.addRoomName} />
         </nav>
         <section className="content">
           This is for main content
