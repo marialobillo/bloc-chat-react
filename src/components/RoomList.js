@@ -33,6 +33,12 @@ class RoomList extends Component{
 
         })}
         </ul>
+        <div className="create-room">
+          <form>
+            <input type="text" name="room_name" />
+            <input type="submit" value="New Room" />
+          </form>
+        </div>
       </div>
     );
   }
