@@ -21,13 +21,18 @@ class RoomList extends Component{
       //console.log(this.state.rooms);
     });
   }
+
   render(){
     return(
       <div className="room-list">
         <ul>
         {this.state.rooms.map((room, index) => {
           return (
-            <li key={index} className="room-item">
+            <li
+              key={index}
+              className="room-item"
+              onClick={() => this.props.handleActiveRoom(room)}
+            >
               {room.name}
             </li>);
 

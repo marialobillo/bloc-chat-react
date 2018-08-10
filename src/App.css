@@ -1,31 +1,4 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 /*
 blue : #05386B;
 dark green: #379683;
@@ -40,7 +13,7 @@ body{
 /* Room List */
 .aside-menu{
   height: 100%;
-   width: 250px;
+   width: 25%;
    position: fixed;
    z-index: 1;
    top: 0;
@@ -72,6 +45,56 @@ body{
   text-decoration: none;
 }
 
+/* Content */
+
 .content{
+  width:75%;
   color: #EDF5E1;
+  position: fixed;
+  top:0;
+  right:0;
+  margin-right: 5px;
+}
+
+/* Messages */
+
+.message-list{
+  overflow:auto;
+}
+.message-item{
+  background-color:#EDF5E1;
+  color: #05386B;
+  padding: 10px;
+    border-bottom: 1px solid #379683;
+}
+
+.activeRoom-title{
+
+  text-align: center;
+}
+
+ul.message-list{
+  list-style: none;
+  margin-left:0;
+
+}
+
+.msg-username{
+  font-weight: bold;
+  display:block;
+}
+
+.msg-content{
+  width: 70%;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.msg-time{
+  width: 15%;
+  display: inline-block;
+  font-size:10px;
+  position:relative;
+  right: -100px;
+  bottom: 0;
 }
