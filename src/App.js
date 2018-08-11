@@ -52,7 +52,7 @@ class App extends Component {
           <RoomForm addRoomName={this.addRoomName} />
         </nav>
         <section className="content">
-          <h2 class="activeRoom-title">{this.state.activeRoom.name}</h2>
+          <h2 className="activeRoom-title">{this.state.activeRoom.name}</h2>
           <MessageList
             firebase={firebase}
             activeRoom={this.state.activeRoom}
