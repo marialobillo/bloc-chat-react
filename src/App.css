@@ -115,3 +115,30 @@ ul.message-list{
   margin-top: 5px;
   border-radius: 2px;
 }
+
+/* New Message */
+.new-message{
+  width:73%;
+  position: fixed;
+  bottom:0;
+  right:0;
+  padding: 10px;
+}
+
+.input-message{
+  width:70%;
+  position:relative;
+  float: left;
+  margin-left:0;
+  padding:11px;
+  font-size: 14px;
+  border: 1px solid #8EE4AF;
+}
+
+.btn-message{
+  background-color: #05386B;
+  border: 1px solid #05386B;
+  color: #EDF5E1;
+  padding: 11px 20px;
+  font-size: 14px;
+}

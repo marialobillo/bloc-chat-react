@@ -18,7 +18,6 @@ class RoomList extends Component{
       this.setState({
         rooms: this.state.rooms.concat(room)
       });
-      //console.log(this.state.rooms);
     });
   }
 
