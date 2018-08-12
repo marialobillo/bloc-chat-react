@@ -4,6 +4,7 @@ import './App.css';
 import RoomList from './components/RoomList';
 import RoomForm from './components/RoomForm';
 import MessageList from './components/MessageList';
+import User from './components/User';
 
   // Initialize Firebase
   const config = {
@@ -28,7 +29,8 @@ class App extends Component {
 
     this.state = {
       rooms: [],
-      activeRoom: ''
+      activeRoom: '',
+      user: ''
     }
   }
   handleActiveRoom = (activeRoom) => {
@@ -38,6 +40,9 @@ class App extends Component {
   addRoomName(room){
     //console.log(room);
     this.database.push().set({ name: room });
+  }
+  setUser = (user) => {
+    this.setState({ user });
   }
   render() {
     return (
@@ -50,6 +55,13 @@ class App extends Component {
             activeRoom={this.state.activeRoom}
           />
           <RoomForm addRoomName={this.addRoomName} />
+          <section className="user">
+            <User
+              firebase={firebase}
+              setUser={this.setUser}
+              user={this.state.user}
+            />
+          </section>
         </nav>
         <section className="content">
           <h2 className="activeRoom-title">{this.state.activeRoom.name}</h2>

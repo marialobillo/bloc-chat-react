@@ -98,3 +98,20 @@ ul.message-list{
   right: -100px;
   bottom: 0;
 }
+
+.user{
+  margin-top:30%;
+  margin-left: 5px;
+}
+
+.google{
+  font-family: 'Roboto', sans-serif;
+  background-color: #4285F4;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #4285F4;
+  padding: 8px 18px;
+  display: block;
+  margin-top: 5px;
+  border-radius: 2px;
+}
