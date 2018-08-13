@@ -51,22 +51,16 @@ class MessageList extends Component{
   }
 
   addMessage = (e) => {
-    console.log(this.state.content);
-    console.log(this.props.activeRoom.key);
-    console.log(this.props.user.displayName);
 
     let today = new Date();
     let formattedDate = this.getDate(today);
-    console.log('la otra fecha -> ' + formattedDate);
 
-
-    // e.preventDefault();
-    // this.messagesRef.push( {
-    //   content: this.state.content,
-    //   roomId: this.props.roomId,
-    //   sentAt: this.props.firebase.database.ServerValue.TIMESTAMP,
-    //   username: this.props.user.displayName
-    // });
+    this.messagesRef.push( {
+      content: this.state.content,
+      roomId: this.props.activeRoom.key,
+      sentAt: formattedDate,
+      username: this.props.user.displayName
+    });
     this.setState({ content: ''});
   }
   renderInput = () => {
@@ -92,7 +86,7 @@ class MessageList extends Component{
           className="input-message"
           placeholder="Write a new Message..."
           onChange={this.handleInput}
-          value={this.state.newMessage}
+          value={this.state.content}
           autoFocus
         />
         <button className="btn-message"
